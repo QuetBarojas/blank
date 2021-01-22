@@ -1,13 +1,7 @@
-version: '2.1'
+version: '3.5'
 
 services:
   blank-api:
-    environment:
-      MAX_JAVA_HEAP_SIZE: ${MEDIUM_SIZE:--Xmx256m}
-      BASE_URL_SYSTEM: ${BASE_URL_SYSTEM}
-      JSONDOC_BASE_URL: ${JSONDOC_BASE_URL}
-      HOSPITAL_HOST_IP: ${HOSPITAL_HOST_IP}
-      ORTHANC_HOST_IP: ${ORTHANC_HOST_IP}
     build:
       context: blank
     restart: always

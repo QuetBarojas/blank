@@ -6,10 +6,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class ImageStudiesApplication {
+public class BlankApplication {
 
   public static void main(final String[] args) throws Exception {
-    SpringApplication.run(ImageStudiesApplication.class, args);
+    SpringApplication.run(BlankApplication.class, args);
   }
 
   @Bean

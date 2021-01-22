@@ -23,7 +23,9 @@ Note: You can see the details of the previous commands in `Makefile` file
 
 ### Application ports.
 	* blank-api: 8085
+        * http://localhost:8085/blank-api/api/version
     * angular-app: 4200
+        * http://localhost:4200/
     * database-port: 33306
 
 

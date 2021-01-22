@@ -1,0 +1,19 @@
+version: '2.1'
+
+services:
+  image-studies-api:
+    image: 933206303218.dkr.ecr.us-west-2.amazonaws.com/covadonga/image-studies-api:${TAG}
+    environment:
+      MAX_JAVA_HEAP_SIZE: ${MEDIUM_SIZE:--Xmx256m}
+    restart: always
+
+  image-web:
+    image: image-web:${TAG}
+    build:
+      context: image-web
+    restart: always
+    volumes:
+      - ./env-config/env-deploy.json:/usr/share/nginx/html/env.json
+      - ./env-config/environment.deploy.json:/usr/share/nginx/html/environment.deploy.json
+    ports:
+      - 8086:80

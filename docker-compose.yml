@@ -1,0 +1,27 @@
+version: '2.1'
+
+services:
+  blank-api:
+    environment:
+      MAX_JAVA_HEAP_SIZE: ${MEDIUM_SIZE:--Xmx256m}
+      BASE_URL_SYSTEM: ${BASE_URL_SYSTEM}
+      JSONDOC_BASE_URL: ${JSONDOC_BASE_URL}
+      HOSPITAL_HOST_IP: ${HOSPITAL_HOST_IP}
+      ORTHANC_HOST_IP: ${ORTHANC_HOST_IP}
+    build:
+      context: blank
+    restart: always
+    ports:
+      - 8085:8085
+
+  database:
+    image: mysql:5.7.19
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: blank
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: demo
+    ports:
+      - 33306:3306
+

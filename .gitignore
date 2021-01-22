@@ -1,0 +1,35 @@
+### global ###
+target/
+.apt_generated/
+test-output/
+.apt_generated_tests/
+/settings.xml
+
+### eclipse ###
+.classpath
+.project
+.factorypath
+.settings/
+
+### intellij ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### STS ###
+.springBeans
+
+# mac
+.DS_Store
+
+# checkstyle
+.checkstyle
+
+run.bat
+node_modules/
+.env
+
+#maven
+dependency-reduced-pom.xml
+.env

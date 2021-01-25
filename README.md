@@ -7,7 +7,7 @@
     * IDE (Eclipse, Intellij etc)
     * Maven cli (optional)
 
-### Intallation intructions
+### Installation instructions
  
 + Import the project in your preferred IDE and create a Run Configuration with following configuration in main project:
     * Goals: `com.coveo:fmt-maven-plugin:format clean install`

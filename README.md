@@ -1,16 +1,26 @@
 # Blank Application
+
+
+# Requirements:
+
+    * Docker
+    * IDE (Eclipse, Intellij etc)
+    * Maven cli (optional)
+
+### Intallation intructions
  
-### Create a maven build configuration and run it
- 
-+ Using Eclipse create Run Configuration with following configuration in main project:
++ Import the project in your preferred IDE and create a Run Configuration with following configuration in main project:
     * Goals: `com.coveo:fmt-maven-plugin:format clean install spring-boot:run`
     * Profiles: `dev`
     * Check `skip tests` option.
 
-+ Using cli run the following:
-    * Install everything `make install`
-    * API `make run-api`
-    * API `make run-web`
+Note: If you have maven cli you can run `make build` to build the api
+
++ Then run the following commands to run the web and the api
+
+    * Run the API `make run-api`
+    * Install web`make install-web:`
+    * Run web `make run-web`
 
 Note: You can see the details of the previous commands in `Makefile` file
 

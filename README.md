@@ -10,7 +10,7 @@
 ### Intallation intructions
  
 + Import the project in your preferred IDE and create a Run Configuration with following configuration in main project:
-    * Goals: `com.coveo:fmt-maven-plugin:format clean install spring-boot:run`
+    * Goals: `com.coveo:fmt-maven-plugin:format clean install`
     * Profiles: `dev`
     * Check `skip tests` option.
 
